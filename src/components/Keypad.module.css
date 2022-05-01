@@ -1,0 +1,112 @@
+.keyPad {
+  background: black;
+  width: 250px;
+  height: 250px;
+  grid-template-areas:
+    "ac ac divide mul"
+    "one two three add"
+    "four five six sub"
+    "seven eight nine equ"
+    "zero zero dot equ";
+  gap: 0px;
+  padding: 10px;
+  display: grid;
+}
+
+.keyPad > div {
+  border-style: solid;
+  border-width: 1pt;
+  border-color: black;
+  text-align: center;
+  font-family: Share Tech Mono, monospace;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  display: table;
+}
+
+.keyPad > div:hover {
+  border-color: white;
+  color: black;
+}
+
+span {
+  vertical-align: middle;
+  display: table-cell;
+  line-height: normal;
+}
+
+.clear {
+  background: red;
+  grid-area: ac;
+}
+
+.add {
+  background: gray;
+  grid-area: add;
+}
+.subtract {
+  background: gray;
+  grid-area: sub;
+}
+.multiply {
+  background: gray;
+  grid-area: mul;
+}
+.divide {
+  background: gray;
+  grid-area: divide;
+}
+.decimal {
+  background: gray;
+  grid-area: dot;
+}
+.zero {
+  background: gray;
+  grid-area: zero;
+  text-align: center;
+}
+.one {
+  background: gray;
+  grid-area: one;
+}
+.two {
+  background: gray;
+  grid-area: two;
+}
+.three {
+  background: gray;
+  grid-area: three;
+}
+.four {
+  background: gray;
+  grid-area: four;
+}
+.five {
+  background: gray;
+  grid-area: five;
+}
+.six {
+  background: gray;
+  grid-area: six;
+}
+.seven {
+  background: gray;
+  grid-area: seven;
+}
+.eight {
+  background: gray;
+  grid-area: eight;
+}
+.nine {
+  background: gray;
+  grid-area: nine;
+}
+
+.equals {
+  background: turquoise;
+  grid-area: equ;
+}
+
+/************/
