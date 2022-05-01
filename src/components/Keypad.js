@@ -21,54 +21,86 @@ const Keypad = ({ setNumber }) => {
         name="AC"
         onClick={handleClick}
       >AC</button>
-      <div id="divide" className={KeypadStyle.divide}>
+      <button id="divide" className={KeypadStyle.divide}
+      name="/"
+      onClick={handleClick}>
         <span> /</span>
-      </div>
-      <div id="zero" className={KeypadStyle.zero}>
+      </button>
+      <button id="zero" className={KeypadStyle.zero}
+      name="0"
+      onClick={handleClick}>
         <span> 0</span>
-      </div>
-      <div id="one" className={KeypadStyle.one}>
+      </button>
+      <button id="one" className={KeypadStyle.one}
+      name="1"
+      onClick={handleClick}>
         <span> 1 </span>
-      </div>
-      <div id="two" className={KeypadStyle.two}>
+      </button>
+      <button id="two" className={KeypadStyle.two}
+      name="2"
+      onClick={handleClick}>
         <span> 2 </span>
-      </div>
-      <div id="three" className={KeypadStyle.three}>
+      </button>
+      <button id="three" className={KeypadStyle.three}
+      name="3"
+      onClick={handleClick}>
         <span> 3</span>
-      </div>
-      <div id="four" className={KeypadStyle.four}>
+      </button>
+      <button id="four" className={KeypadStyle.four}
+      name="4"
+      onClick={handleClick}>
         <span>4 </span>
-      </div>
-      <div id="five" className={KeypadStyle.five}>
+      </button>
+      <button id="five" className={KeypadStyle.five}
+      name="5"
+      onClick={handleClick}>
         <span>5</span>
-      </div>
-      <div id="six" className={KeypadStyle.six}>
+      </button>
+      <button id="six" className={KeypadStyle.six}
+      name="6"
+      onClick={handleClick}>
         <span>6</span>
-      </div>
-      <div id="seven" className={KeypadStyle.seven}>
+      </button>
+      <button id="seven" className={KeypadStyle.seven}
+      name="7"
+      onClick={handleClick}>
         <span>7</span>
-      </div>
-      <div id="eight" className={KeypadStyle.eight}>
+      </button>
+      <button id="eight" className={KeypadStyle.eight}
+      name="8"
+      onClick={handleClick}>
         <span>8</span>
-      </div>
-      <div id="nine" className={KeypadStyle.nine}>
+      </button>
+      <button id="nine" className={KeypadStyle.nine}
+      name="9"
+      onClick={handleClick}>
         <span>9</span>
-      </div>
-      <div id="multiply" className={KeypadStyle.multiply}>
+      </button>
+      <button id="multiply" className={KeypadStyle.multiply}
+      name="*"
+      onClick={handleClick}>
         <span>x</span>
-      </div>
-      <div id="add" className={KeypadStyle.add}>
+      </button>
+      <button id="add" className={KeypadStyle.add}
+      name="+"
+      onClick={handleClick}>
         <span>+</span>
-      </div>
-      <div id="subtract" className={KeypadStyle.subtract}>
+      </button>
+      <button id="subtract" className={KeypadStyle.subtract}
+      name="-"
+      onClick={handleClick}>
         <span>-</span>
-      </div>
-      <div id="decimal" className={KeypadStyle.decimal}>
+      </button>
+      <button id="decimal" className={KeypadStyle.decimal}
+      name="."
+      onClick={handleClick}>
         <span>.</span>
-      </div>
-      <div id="equals" className={KeypadStyle.equals}>
+      </button>
+      <button id="equals" className={KeypadStyle.equals}
+      name="="
+      onClick={handleClick}>
         <span>=</span>
-      </div>
+      </button>
     </div>
   );
 };
