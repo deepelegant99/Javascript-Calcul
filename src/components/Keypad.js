@@ -1,67 +1,72 @@
 import KeypadStyle from "./Keypad.module.css";
-import { useState, useEffect } from "react";
 
-const Keypad = () => {
-  const [num, setNum] = useState(0);
-  function printNum(a) {
-    console.log(a);
-  }
-
-  function divide() {}
-
-  function multiply() {}
+const Keypad = ({ setNumber }) => {
+  const handleClick = (event) => {
+    console.log(event.target.name);
+  };
 
   return (
     <div className={KeypadStyle.keyPad}>
-      <div id="clear" className={KeypadStyle.clear} onClick={divide()}>
-        <span>AC</span>
-      </div>
-      <div id="divide" className={KeypadStyle.divide} onClick={divide()}>
+      {/* <div
+        id="clear"
+        className={KeypadStyle.clear}
+        name="AC"
+        onClick={handleClick}
+      >
+        AC
+      </div> */}
+      <button
+        id="clear"
+        className={KeypadStyle.clear}
+        name="AC"
+        onClick={handleClick}
+      >AC</button>
+      <div id="divide" className={KeypadStyle.divide}>
         <span> /</span>
       </div>
-      <div id="zero" className={KeypadStyle.zero} onClick={printNum("0")}>
+      <div id="zero" className={KeypadStyle.zero}>
         <span> 0</span>
       </div>
-      <div id="one" className={KeypadStyle.one} onClick={printNum("1")}>
+      <div id="one" className={KeypadStyle.one}>
         <span> 1 </span>
       </div>
-      <div id="two" className={KeypadStyle.two} onClick={printNum("2")}>
+      <div id="two" className={KeypadStyle.two}>
         <span> 2 </span>
       </div>
-      <div id="three" className={KeypadStyle.three} onClick={printNum("3")}>
+      <div id="three" className={KeypadStyle.three}>
         <span> 3</span>
       </div>
-      <div id="four" className={KeypadStyle.four} onClick={printNum("4")}>
+      <div id="four" className={KeypadStyle.four}>
         <span>4 </span>
       </div>
-      <div id="five" className={KeypadStyle.five} onClick={printNum("5")}>
+      <div id="five" className={KeypadStyle.five}>
         <span>5</span>
       </div>
-      <div id="six" className={KeypadStyle.six} onClick={printNum("6")}>
+      <div id="six" className={KeypadStyle.six}>
         <span>6</span>
       </div>
-      <div id="seven" className={KeypadStyle.seven} onClick={printNum("7")}>
+      <div id="seven" className={KeypadStyle.seven}>
         <span>7</span>
       </div>
-      <div id="eight" className={KeypadStyle.eight} onClick={printNum("8")}>
+      <div id="eight" className={KeypadStyle.eight}>
         <span>8</span>
       </div>
-      <div id="nine" className={KeypadStyle.nine} onClick={printNum("9")}>
+      <div id="nine" className={KeypadStyle.nine}>
         <span>9</span>
       </div>
-      <div id="multiply" className={KeypadStyle.multiply} onClick={multiply()}>
+      <div id="multiply" className={KeypadStyle.multiply}>
         <span>x</span>
       </div>
-      <div id="add" className={KeypadStyle.add} onClick={multiply()}>
+      <div id="add" className={KeypadStyle.add}>
         <span>+</span>
       </div>
-      <div id="subtract" className={KeypadStyle.subtract} onClick={multiply()}>
+      <div id="subtract" className={KeypadStyle.subtract}>
         <span>-</span>
       </div>
-      <div id="decimal" className={KeypadStyle.decimal} onClick={multiply()}>
+      <div id="decimal" className={KeypadStyle.decimal}>
         <span>.</span>
       </div>
-      <div id="equals" className={KeypadStyle.equals} onClick="">
+      <div id="equals" className={KeypadStyle.equals}>
         <span>=</span>
       </div>
     </div>
