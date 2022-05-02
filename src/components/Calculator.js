@@ -8,7 +8,7 @@ const Calculator = () => {
   return (
     <div className={calculatorStyles.body}>
       <Display number={number} />
-      <Keypad setNumber={setNumber} />
+      <Keypad number={number} setNumber={setNumber} />
     </div>
   );
 };

@@ -1,104 +1,147 @@
 import KeypadStyle from "./Keypad.module.css";
 
-const Keypad = ({ setNumber }) => {
+const Keypad = ({ number, setNumber }) => {
+
   const handleClick = (event) => {
-    console.log(event.target.name);
+    console.log(parseFloat(event.target.name));
   };
 
   return (
     <div className={KeypadStyle.keyPad}>
-      {/* <div
+      <button
         id="clear"
         className={KeypadStyle.clear}
         name="AC"
         onClick={handleClick}
       >
         AC
-      </div> */}
+      </button>
       <button
-        id="clear"
-        className={KeypadStyle.clear}
-        name="AC"
+        id="divide"
+        className={KeypadStyle.divide}
+        name="/"
         onClick={handleClick}
-      >AC</button>
-      <button id="divide" className={KeypadStyle.divide}
-      name="/"
-      onClick={handleClick}>
+      >
         <span> /</span>
       </button>
-      <button id="zero" className={KeypadStyle.zero}
-      name="0"
-      onClick={handleClick}>
+      <button
+        id="zero"
+        className={KeypadStyle.zero}
+        name="0"
+        onClick={handleClick}
+      >
         <span> 0</span>
       </button>
-      <button id="one" className={KeypadStyle.one}
-      name="1"
-      onClick={handleClick}>
+      <button
+        id="one"
+        className={KeypadStyle.one}
+        name="1"
+        onClick={handleClick}
+      >
         <span> 1 </span>
       </button>
-      <button id="two" className={KeypadStyle.two}
-      name="2"
-      onClick={handleClick}>
+      <button
+        id="two"
+        className={KeypadStyle.two}
+        name="2"
+        onClick={handleClick}
+      >
         <span> 2 </span>
       </button>
-      <button id="three" className={KeypadStyle.three}
-      name="3"
-      onClick={handleClick}>
+      <button
+        id="three"
+        className={KeypadStyle.three}
+        name="3"
+        onClick={handleClick}
+      >
         <span> 3</span>
       </button>
-      <button id="four" className={KeypadStyle.four}
-      name="4"
-      onClick={handleClick}>
+      <button
+        id="four"
+        className={KeypadStyle.four}
+        name="4"
+        onClick={handleClick}
+      >
         <span>4 </span>
       </button>
-      <button id="five" className={KeypadStyle.five}
-      name="5"
-      onClick={handleClick}>
+      <button
+        id="five"
+        className={KeypadStyle.five}
+        name="5"
+        onClick={handleClick}
+      >
         <span>5</span>
       </button>
-      <button id="six" className={KeypadStyle.six}
-      name="6"
-      onClick={handleClick}>
+      <button
+        id="six"
+        className={KeypadStyle.six}
+        name="6"
+        onClick={handleClick}
+      >
         <span>6</span>
       </button>
-      <button id="seven" className={KeypadStyle.seven}
-      name="7"
-      onClick={handleClick}>
+      <button
+        id="seven"
+        className={KeypadStyle.seven}
+        name="7"
+        onClick={handleClick}
+      >
         <span>7</span>
       </button>
-      <button id="eight" className={KeypadStyle.eight}
-      name="8"
-      onClick={handleClick}>
+      <button
+        id="eight"
+        className={KeypadStyle.eight}
+        name="8"
+        onClick={handleClick}
+      >
         <span>8</span>
       </button>
-      <button id="nine" className={KeypadStyle.nine}
-      name="9"
-      onClick={handleClick}>
+      <button
+        id="nine"
+        className={KeypadStyle.nine}
+        name="9"
+        onClick={handleClick}
+      >
         <span>9</span>
       </button>
-      <button id="multiply" className={KeypadStyle.multiply}
-      name="*"
-      onClick={handleClick}>
+      <button
+        id="multiply"
+        className={KeypadStyle.multiply}
+        name="*"
+        onClick={handleClick}
+      >
         <span>x</span>
       </button>
-      <button id="add" className={KeypadStyle.add}
-      name="+"
-      onClick={handleClick}>
+      <button
+        id="add"
+        className={KeypadStyle.add}
+        name="+"
+        onClick={handleClick}
+      >
         <span>+</span>
       </button>
-      <button id="subtract" className={KeypadStyle.subtract}
-      name="-"
-      onClick={handleClick}>
+      <button
+        id="subtract"
+        className={KeypadStyle.subtract}
+        name="-"
+        onClick={handleClick}
+      >
         <span>-</span>
       </button>
-      <button id="decimal" className={KeypadStyle.decimal}
-      name="."
-      onClick={handleClick}>
+      <button
+        id="decimal"
+        className={KeypadStyle.decimal}
+        name="."
+        onClick={handleClick}
+      >
         <span>.</span>
       </button>
-      <button id="equals" className={KeypadStyle.equals}
-      name="="
-      onClick={handleClick}>
+      <button
+        id="equals"
+        className={KeypadStyle.equals}
+        name="="
+        onClick={handleClick}
+      >
         <span>=</span>
       </button>
     </div>
