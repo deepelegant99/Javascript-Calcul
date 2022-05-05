@@ -1,9 +1,8 @@
 import KeypadStyle from "./Keypad.module.css";
 
-const Keypad = ({ number, setNumber }) => {
-
+const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
-    console.log(parseFloat(event.target.name));
+    setExp((exp) => exp.concat(event.target.name));
   };
 
   return (

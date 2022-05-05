@@ -1,9 +1,9 @@
 import displayStyles from "./Display.module.css";
 
-const Display = ({ number }) => {
+const Display = ({ exp }) => {
   return (
     <div id="display" className={displayStyles.display}>
-      {number}
+      {exp}
     </div>
   );
 };

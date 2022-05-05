@@ -4,11 +4,11 @@ import calculatorStyles from "./Calculator.module.css";
 import { useState, useEffect } from "react";
 
 const Calculator = () => {
-  const [number, setNumber] =useState(0)
+  const [exp, setExp] =useState("")
   return (
     <div className={calculatorStyles.body}>
-      <Display number={number} />
-      <Keypad number={number} setNumber={setNumber} />
+      <Display exp={exp} />
+      <Keypad exp={exp} setExp={setExp} />
     </div>
   );
 };
