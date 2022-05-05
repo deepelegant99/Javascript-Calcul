@@ -2,6 +2,7 @@ import KeypadStyle from "./Keypad.module.css";
 
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
+    event.preventDefault();
     setExp((exp) => exp.concat(event.target.name));
   };
 
