@@ -3,7 +3,23 @@ import KeypadStyle from "./Keypad.module.css";
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
     event.preventDefault();
-    setExp((exp) => exp.concat(event.target.name));
+
+    // if (event.target.name === "=") {
+    //   setExp((exp) => eval(exp));
+    // } else {
+    //   setExp((exp) => exp.concat(event.target.name));
+    // }
+
+    switch (event.target.name) {
+      case "=":
+        setExp((exp) => eval(exp));
+        break;
+      case "AC":
+        setExp("");
+        break;
+      default:
+        setExp((exp) => exp.concat(event.target.name));
+    }
   };
 
   return (
