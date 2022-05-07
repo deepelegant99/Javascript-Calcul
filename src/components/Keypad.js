@@ -1,8 +1,9 @@
+import { useEffect } from "react/cjs/react.production.min";
 import KeypadStyle from "./Keypad.module.css";
 
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     // if (event.target.name === "=") {
     //   setExp((exp) => eval(exp));
@@ -10,15 +11,16 @@ const Keypad = ({ exp, setExp }) => {
     //   setExp((exp) => exp.concat(event.target.name));
     // }
 
-    switch (event.target.name) {
+    switch (event.target.value) {
       case "=":
-        setExp((exp) => eval(exp));
+        setExp((exp) => eval(exp).toString());
         break;
       case "AC":
         setExp("");
         break;
       default:
-        setExp((exp) => exp.concat(event.target.name));
+        console.log(event.target.value);
+        setExp((exp) => exp.concat(event.target.value));
     }
   };
 
@@ -27,7 +29,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="clear"
         className={KeypadStyle.clear}
-        name="AC"
+        value="AC"
         onClick={handleClick}
       >
         AC
@@ -35,7 +37,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="divide"
         className={KeypadStyle.divide}
-        name="/"
+        value="/"
         onClick={handleClick}
       >
         <span> /</span>
@@ -43,7 +45,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="zero"
         className={KeypadStyle.zero}
-        name="0"
+        value="0"
         onClick={handleClick}
       >
         <span> 0</span>
@@ -51,7 +53,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="one"
         className={KeypadStyle.one}
-        name="1"
+        value="1"
         onClick={handleClick}
       >
         <span> 1 </span>
@@ -59,7 +61,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="two"
         className={KeypadStyle.two}
-        name="2"
+        value="2"
         onClick={handleClick}
       >
         <span> 2 </span>
@@ -67,7 +69,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="three"
         className={KeypadStyle.three}
-        name="3"
+        value="3"
         onClick={handleClick}
       >
         <span> 3</span>
@@ -75,7 +77,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="four"
         className={KeypadStyle.four}
-        name="4"
+        value="4"
         onClick={handleClick}
       >
         <span>4 </span>
@@ -83,7 +85,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="five"
         className={KeypadStyle.five}
-        name="5"
+        value="5"
         onClick={handleClick}
       >
         <span>5</span>
@@ -91,7 +93,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="six"
         className={KeypadStyle.six}
-        name="6"
+        value="6"
         onClick={handleClick}
       >
         <span>6</span>
@@ -99,7 +101,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="seven"
         className={KeypadStyle.seven}
-        name="7"
+        value="7"
         onClick={handleClick}
       >
         <span>7</span>
@@ -107,7 +109,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="eight"
         className={KeypadStyle.eight}
-        name="8"
+        value="8"
         onClick={handleClick}
       >
         <span>8</span>
@@ -115,7 +117,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="nine"
         className={KeypadStyle.nine}
-        name="9"
+        value="9"
         onClick={handleClick}
       >
         <span>9</span>
@@ -123,7 +125,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="multiply"
         className={KeypadStyle.multiply}
-        name="*"
+        value="*"
         onClick={handleClick}
       >
         <span>x</span>
@@ -131,7 +133,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="add"
         className={KeypadStyle.add}
-        name="+"
+        value="+"
         onClick={handleClick}
       >
         <span>+</span>
@@ -139,7 +141,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="subtract"
         className={KeypadStyle.subtract}
-        name="-"
+        value="-"
         onClick={handleClick}
       >
         <span>-</span>
@@ -147,7 +149,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="decimal"
         className={KeypadStyle.decimal}
-        name="."
+        value="."
         onClick={handleClick}
       >
         <span>.</span>
@@ -155,7 +157,7 @@ const Keypad = ({ exp, setExp }) => {
       <button
         id="equals"
         className={KeypadStyle.equals}
-        name="="
+        value="="
         onClick={handleClick}
       >
         <span>=</span>
