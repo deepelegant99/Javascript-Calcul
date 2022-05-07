@@ -12,7 +12,7 @@ const Keypad = ({ exp, setExp }) => {
 
     switch (event.target.name) {
       case "=":
-        setExp((exp) => eval(exp));
+        setExp((exp) => eval(exp).toString());
         break;
       case "AC":
         setExp("");
