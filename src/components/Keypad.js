@@ -1,8 +1,9 @@
+import { useEffect } from "react/cjs/react.production.min";
 import KeypadStyle from "./Keypad.module.css";
 
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     // if (event.target.name === "=") {
     //   setExp((exp) => eval(exp));
@@ -18,6 +19,7 @@ const Keypad = ({ exp, setExp }) => {
         setExp("");
         break;
       default:
+        console.log(event.target.value);
         setExp((exp) => exp.concat(event.target.value));
     }
   };
