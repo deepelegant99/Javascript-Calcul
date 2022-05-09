@@ -3,7 +3,7 @@ import KeypadStyle from "./Keypad.module.css";
 
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     // if (event.target.name === "=") {
     //   setExp((exp) => eval(exp));
@@ -11,7 +11,9 @@ const Keypad = ({ exp, setExp }) => {
     //   setExp((exp) => exp.concat(event.target.name));
     // }
 
-    switch (event.target.value) {
+    // const val = event.target.value;
+    const val = event.currentTarget.value;
+    switch (val) {
       case "=":
         setExp((exp) => eval(exp).toString());
         break;
@@ -19,8 +21,8 @@ const Keypad = ({ exp, setExp }) => {
         setExp("");
         break;
       default:
-        console.log(event.target.value);
-        setExp((exp) => exp.concat(event.target.value));
+        console.log(val);
+        setExp((exp) => exp.concat(val));
     }
   };
 
@@ -30,7 +32,7 @@ const Keypad = ({ exp, setExp }) => {
         id="clear"
         className={KeypadStyle.clear}
         value="AC"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         AC
       </button>
@@ -38,7 +40,7 @@ const Keypad = ({ exp, setExp }) => {
         id="divide"
         className={KeypadStyle.divide}
         value="/"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span> /</span>
       </button>
@@ -46,7 +48,7 @@ const Keypad = ({ exp, setExp }) => {
         id="zero"
         className={KeypadStyle.zero}
         value="0"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span> 0</span>
       </button>
@@ -54,7 +56,7 @@ const Keypad = ({ exp, setExp }) => {
         id="one"
         className={KeypadStyle.one}
         value="1"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span> 1 </span>
       </button>
@@ -62,7 +64,7 @@ const Keypad = ({ exp, setExp }) => {
         id="two"
         className={KeypadStyle.two}
         value="2"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span> 2 </span>
       </button>
@@ -70,7 +72,7 @@ const Keypad = ({ exp, setExp }) => {
         id="three"
         className={KeypadStyle.three}
         value="3"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span> 3</span>
       </button>
@@ -78,7 +80,7 @@ const Keypad = ({ exp, setExp }) => {
         id="four"
         className={KeypadStyle.four}
         value="4"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>4 </span>
       </button>
@@ -86,7 +88,7 @@ const Keypad = ({ exp, setExp }) => {
         id="five"
         className={KeypadStyle.five}
         value="5"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>5</span>
       </button>
@@ -94,7 +96,7 @@ const Keypad = ({ exp, setExp }) => {
         id="six"
         className={KeypadStyle.six}
         value="6"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>6</span>
       </button>
@@ -102,7 +104,7 @@ const Keypad = ({ exp, setExp }) => {
         id="seven"
         className={KeypadStyle.seven}
         value="7"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>7</span>
       </button>
@@ -110,7 +112,7 @@ const Keypad = ({ exp, setExp }) => {
         id="eight"
         className={KeypadStyle.eight}
         value="8"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>8</span>
       </button>
@@ -118,7 +120,7 @@ const Keypad = ({ exp, setExp }) => {
         id="nine"
         className={KeypadStyle.nine}
         value="9"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>9</span>
       </button>
@@ -126,7 +128,7 @@ const Keypad = ({ exp, setExp }) => {
         id="multiply"
         className={KeypadStyle.multiply}
         value="*"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>x</span>
       </button>
@@ -134,7 +136,7 @@ const Keypad = ({ exp, setExp }) => {
         id="add"
         className={KeypadStyle.add}
         value="+"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>+</span>
       </button>
@@ -142,7 +144,7 @@ const Keypad = ({ exp, setExp }) => {
         id="subtract"
         className={KeypadStyle.subtract}
         value="-"
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>-</span>
       </button>
@@ -150,7 +152,7 @@ const Keypad = ({ exp, setExp }) => {
         id="decimal"
         className={KeypadStyle.decimal}
         value="."
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>.</span>
       </button>
@@ -158,7 +160,7 @@ const Keypad = ({ exp, setExp }) => {
         id="equals"
         className={KeypadStyle.equals}
         value="="
-        onClick={handleClick}
+        onClick={(event) => handleClick(event)}
       >
         <span>=</span>
       </button>
