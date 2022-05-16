@@ -3,7 +3,7 @@ import displayStyles from "./Display.module.css";
 const Display = ({ exp }) => {
   return (
     <div id="display" className={displayStyles.display}>
-      {exp}
+      {exp || "0"}
     </div>
   );
 };
