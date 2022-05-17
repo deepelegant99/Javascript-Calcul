@@ -1,30 +1,30 @@
 import { useEffect } from "react/cjs/react.production.min";
 import KeypadStyle from "./Keypad.module.css";
 
+const ops = ["/", "*", "+", "-", "."];
+
 const Keypad = ({ exp, setExp }) => {
   const handleClick = (event) => {
     event.preventDefault();
-
-    // if (event.target.name === "=") {
-    //   setExp((exp) => eval(exp));
-    // } else {
-    //   setExp((exp) => exp.concat(event.target.name));
-    // }
-
-    // const val = event.target.value;
     const val = event.currentTarget.value;
-    switch (val) {
-      case "=":
-        setExp((exp) => eval(exp).toString());
-        break;
-      case "AC":
-        setExp("");
-        break;
-      default:
-        console.log(val);
-        setExp((exp) => exp.concat(val));
+
+    if (
+      (ops.includes(val) && exp === "") ||
+      (ops.includes(val) && ops.includes(exp.slice(-1)))
+    ) {
+      return;
     }
+
+    setExp(exp + val);
   };
+
+  const calculate = () => {
+    setExp(eval(exp));
+  };
+
+  const deleteAll = () =>{
+    setExp("")
+  }
 
   return (
     <div className={KeypadStyle.keyPad}>
@@ -32,7 +32,7 @@ const Keypad = ({ exp, setExp }) => {
         id="clear"
         className={KeypadStyle.clear}
         value="AC"
-        onClick={(event) => handleClick(event)}
+        onClick={() => deleteAll() }
       >
         AC
       </button>
@@ -160,7 +160,7 @@ const Keypad = ({ exp, setExp }) => {
         id="equals"
         className={KeypadStyle.equals}
         value="="
-        onClick={(event) => handleClick(event)}
+        onClick={() => calculate()}
       >
         <span>=</span>
       </button>
