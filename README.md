@@ -1,2 +1,2 @@
-# Javascript-Calculator
+# Javascript-Cal
 Created with CodeSandbox
